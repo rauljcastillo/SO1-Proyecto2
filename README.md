@@ -43,3 +43,11 @@ Aplicacion web desde Cloud Run
 
 Prueba desde locust
 ![""](./img/img2.png)
+
+
+## Conclusiones
+- La implementación de microservicios proporciona una arquitectura flexible y escalable para el manejo del tráfico dentro de la aplicación, permitiendo un desarrollo modular y la capacidad de escalar y modificar componentes individualmente según las necesidades del negocio.
+
+- La adopción de Kafka como sistema de mensajería para el procesamiento de eventos permite una transmisión eficiente de grandes volúmenes de datos en tiempo real, lo que facilita el análisis en tiempo real, la detección de patrones y la toma de decisiones basada en datos en aplicaciones distribuidas.
+
+- La configuración de un controlador de Ingress en Kubernetes facilita la gestión eficiente del tráfico entrante hacia los servicios desplegados en el clúster, garantizando una distribución equitativa de las solicitudes entre los pods y mejorando la disponibilidad y el rendimiento de las aplicaciones en entornos distribuidos y escalables.
