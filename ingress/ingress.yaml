@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/target-type: ip
+    nginx.org/listen-ports: '[5000,8080]'
+    nginx.org/listen-ports-ssl: '[443]'
+    ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/service-upstream: "true"
+  labels:
+    name: my-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - pathType: Prefix
+        path: /grpc/
+        backend:
+          service:
+            name: clientegrpc
+            port: 
+              number: 8080
+      - pathType: Prefix
+        path: /rust/
+        backend:
+          service:
+            name: clientrust
+            port: 
+              number: 5000

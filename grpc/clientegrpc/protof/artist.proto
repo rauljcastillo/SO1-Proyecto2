@@ -1,0 +1,14 @@
+syntax= "proto3";
+option go_package = "./;protosf"; 
+package confp;
+
+service Info {
+    rpc GetInfo(Req) returns (Res) {}
+}
+message Req {
+    string name=1;
+    string album=2;
+    string year=3;
+    string rank=4;
+}
+message Res {}
