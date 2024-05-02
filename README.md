@@ -1,4 +1,4 @@
-Manuela Técnico
+Manual Técnico
 ==================
 
 ## Introducción 
